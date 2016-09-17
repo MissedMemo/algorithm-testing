@@ -1,6 +1,6 @@
 ## Algorithm Testing in Mocha/Chai & ES6
 
-### automatically apply a suite of tests against all specified sorting algorithms
+### dynamically generate a suite of tests to apply against a set of algorithms
 
 
-This project serves as a reference to succinct versions of several standard sorting algorithms, along with the absolute minimum associated infrastructure support required for effective mocha/chai testing under ES6
+Demonstrate succinct versions of several standard sorting algorithms, along with the absolute MINIMAL associated infrastructure required to carry out effective mocha/chai testing under ES6
