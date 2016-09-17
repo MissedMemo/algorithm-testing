@@ -16,7 +16,10 @@ describe( 'Sorting Algorithms...', () => {
   });
 
   const sorts = [
-    { description: 'bubbleSort: O(n^2)', method: _.bubbleSort }
+    { description: 'bubbleSort: O(n^2)',        method: _.bubbleSort },
+    { description: 'insertionSort: O(n log n)', method: _.insertionSort }/*,
+    { description: 'mergeSort: O(n log n)',     method: _.mergeSort },
+    { description: 'quickSort: O(n log n)',     method: _.quickSort }*/
   ];
   
   sorts.forEach( sort => {

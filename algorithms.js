@@ -18,3 +18,16 @@ export const bubbleSort = (array) => {
   return array;
 };
 
+
+export const insertionSort = (array) => {
+
+  for( let iUnsorted = 1; iUnsorted < array.length; iUnsorted++ ) {
+    for( let iSorted = 0; iSorted < iUnsorted; iSorted++ ) {
+      if( array[iUnsorted] < array[iSorted] ) {
+        const current = array.splice( iUnsorted, 1 )[0];
+        array.splice( iSorted, 0, current );
+      }
+    }
+  }
+  return array;
+};
