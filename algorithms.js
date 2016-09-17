@@ -54,3 +54,22 @@ export const mergeSort = ( array ) => {
 
   return merge( mergeSort(left), mergeSort(right) );
 };
+
+
+export const quickSort = ( array ) => {
+
+  if( array.length < 2 )
+    return array;
+
+  let pivot = array.pop(); // not the most efficient, but easiest!
+  let lower = [], higher = [];
+  
+  for( let i = 0; i < array.length; i++ ) {
+    if( array[i] < pivot )
+      lower.push( array[i] );
+    else
+      higher.push( array[i] );
+  }
+
+  return [ ...quickSort(lower), pivot, ...quickSort(higher) ];
+};
