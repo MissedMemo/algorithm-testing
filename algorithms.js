@@ -31,3 +31,26 @@ export const insertionSort = (array) => {
   }
   return array;
 };
+
+
+const merge = ( left, right ) => {
+
+  let merged = [];
+
+  while( left.length && right.length ) {
+    merged.push( left[0] < right[0] ? left.shift() : right.shift() );
+  }
+
+  return merged.concat( left, right ); // one will be EMPTY!
+};
+
+export const mergeSort = ( array ) => {
+
+  if( array.length < 2 )
+    return array;
+
+  let iMid = Math.floor( array.length / 2 );
+  let left = array.slice(0,iMid), right = array.slice(iMid);
+
+  return merge( mergeSort(left), mergeSort(right) );
+};
