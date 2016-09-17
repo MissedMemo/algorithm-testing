@@ -15,7 +15,9 @@ describe( 'Sorting Algorithms...', () => {
     numeric   = [10,5,3,8,2,6,4,7,9,1], sortedNumeric   = [1,2,3,4,5,6,7,8,9,10],
     preSorted = [1,2,3,4,5],            sortedPreSorted = [1,2,3,4,5],
     negValues = [1,2,-3,4,-5],          sortedNegValues = [-5,-3,1,2,4],
-    reversed  = [5,4,3,2,1],            sortedReversed  = [1,2,3,4,5];
+    reversed  = [5,4,3,2,1],            sortedReversed  = [1,2,3,4,5],
+    decimals  = [ 0.5, 4.2, 3.9, 4.1, 3, 2, 1, 20, 0, -2.5, -3.1 ],
+    sortedDecimals = [ -3.1, -2.5, 0, 0.5, 1, 2, 3, 3.9, 4.1, 4.2, 20 ];
   });
 
   const sorts = [
@@ -52,6 +54,11 @@ describe( 'Sorting Algorithms...', () => {
       it( 'should handle reverse-sorted arrays', () => {
         let results = sort.method( reversed );
         expect( results ).to.deep.equal( sortedReversed );
+      });
+
+      it( 'should sort arrays containing decimals', () => {
+        let results = sort.method( decimals );
+        expect( results ).to.deep.equal( sortedDecimals );
       });
 
     });
